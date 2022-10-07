@@ -1,16 +1,16 @@
 <template>
-  <hello-world />
+  <chart></chart>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue';
+import { Vue, Component } from 'vue-property-decorator';
+import Chart from '@/components/3DChart.vue';
 
-export default Vue.extend({
-  name: 'Home',
-
+@Component({
   components: {
-    HelloWorld,
+    Chart,
   },
-});
+})
+export default class HomeView extends Vue {
+}
 </script>
