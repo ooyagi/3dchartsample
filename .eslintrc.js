@@ -13,7 +13,7 @@ module.exports = {
   },
   rules: {
     semi: ['error', 'always'],
-    indent: ["error", 2, { "ignoreComments": true }],
+    indent: ['error', 2, { ignoreComments: true }],
     'comma-dangle': ['error', 'always-multiline'],
     'space-before-function-paren': ['error', 'never'],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
