@@ -5,9 +5,14 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/views/HomeView.vue'),
+    path: '/3d-scatter',
+    name: '3DScatter',
+    component: () => import('@/views/3DScatter.vue'),
+  },
+  {
+    path: '/3d-stackbar',
+    name: '3DStackBar',
+    component: () => import('@/views/3DStackBar.vue'),
   },
 ];
 

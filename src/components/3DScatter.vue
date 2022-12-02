@@ -26,17 +26,6 @@ export default {
             [0, 0, 2, Math.random() * 100], [1, 0, 2, Math.random() * 100], [2, 0, 2, Math.random() * 100],
             [0, 1, 2, Math.random() * 100], [1, 1, 2, Math.random() * 100], [2, 1, 2, Math.random() * 100],
             [0, 2, 2, Math.random() * 100], [1, 2, 2, Math.random() * 100], [2, 2, 2, Math.random() * 100],
-/*
-            [0, 0, 0, 30], [1, 0, 0, 50], [2, 0, 0, 30],
-            [0, 1, 0, 50], [1, 1, 0, 70], [2, 1, 0, 50],
-            [0, 2, 0, 30], [1, 2, 0, 50], [2, 2, 0, 30],
-            [0, 0, 1, 50], [1, 0, 1, 70], [2, 0, 1, 50],
-            [0, 1, 1, 70], [1, 1, 1, 90], [2, 1, 1, 70],
-            [0, 2, 1, 50], [1, 2, 1, 70], [2, 2, 1, 50],
-            [0, 0, 2, 30], [1, 0, 2, 50], [2, 0, 2, 30],
-            [0, 1, 2, 50], [1, 1, 2, 70], [2, 1, 2, 50],
-            [0, 2, 2, 30], [1, 2, 2, 50], [2, 2, 2, 30],
-*/
           ],
         },
         visualMap: [
@@ -70,6 +59,7 @@ export default {
           minInterval: 1,
         },
         grid3D: {
+          boxWidth: 150,
           axisLine: {
             lineStyle: { color: '#ffffff' },
           },
@@ -94,7 +84,8 @@ export default {
               'z',
               'color',
             ],
-            symbolSize: 32,
+            opacity: 50,
+            symbolSize: 30,
             itemStyle: {
               borderWidth: 1,
               borderColor: 'rgba(255,255,255,0.8)',
