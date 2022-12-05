@@ -14,22 +14,6 @@ export default {
     option() {
       return {
         darkMode: true,
-        dataset: [
-          {
-            id: 'sample',
-            source: [
-              [0, 0, 1, Math.random() * 100], [1, 0, 1, Math.random() * 100], [2, 0, 1, Math.random() * 100],
-              [0, 1, 1, Math.random() * 100], [1, 1, 1, Math.random() * 100], [2, 1, 1, Math.random() * 100],
-              [0, 2, 1, Math.random() * 100], [1, 2, 1, Math.random() * 100], [2, 2, 1, Math.random() * 100],
-              [0, 0, 2, Math.random() * 100], [1, 0, 2, Math.random() * 100], [2, 0, 2, Math.random() * 100],
-              [0, 1, 2, Math.random() * 100], [1, 1, 2, Math.random() * 100], [2, 1, 2, Math.random() * 100],
-              [0, 2, 2, Math.random() * 100], [1, 2, 2, Math.random() * 100], [2, 2, 2, Math.random() * 100],
-              [0, 0, 3, Math.random() * 100], [1, 0, 3, Math.random() * 100], [2, 0, 3, Math.random() * 100],
-              [0, 1, 3, Math.random() * 100], [1, 1, 3, Math.random() * 100], [2, 1, 3, Math.random() * 100],
-              [0, 2, 3, Math.random() * 100], [1, 2, 3, Math.random() * 100], [2, 2, 3, Math.random() * 100],
-            ],
-          },
-        ],
         visualMap: [
           {
             top: 10,
@@ -120,11 +104,6 @@ export default {
   methods: {
     refresh() {
       this.$refs.chart.setOption(this.option, true, false);
-    },
-  },
-  watch: {
-    dataSet(newOptions, oldOptions) {
-      this.refresh();
     },
   },
   mounted() {
