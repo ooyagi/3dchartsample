@@ -10,23 +10,34 @@ import VChart from 'vue-echarts';
 export default {
   name: 'chart',
   components: { VChart },
+  data: () => {
+    const res = [];
+    const area = [[0.1, 0.8], [1.1, 1.9], [2.1, 2.9]];
+    for (let i = 0; i < area.length; i++) {
+      for (let j = 0; j < area.length; j++) {
+        for (let k = 0; k < area.length; k++) {
+          var val = Math.random() * 100;
+          for (let x = area[i][0]; x < area[i][1]; x = x + 0.2) {
+            for (let y = area[j][0]; y < area[j][1]; y = y + 0.2) {
+              for (let z = area[k][0]; z < area[k][1]; z = z + 0.2) {
+                res.push([x, y, z, val]);
+              }
+            }
+          }
+        }
+      }
+    }
+    return {
+      source: res,
+    };
+  },
   computed: {
     option() {
       return {
         darkMode: true,
         dataset: {
           id: 'sample',
-          source: [
-            [0, 0, 0, Math.random() * 100], [1, 0, 0, Math.random() * 100], [2, 0, 0, Math.random() * 100],
-            [0, 1, 0, Math.random() * 100], [1, 1, 0, Math.random() * 100], [2, 1, 0, Math.random() * 100],
-            [0, 2, 0, Math.random() * 100], [1, 2, 0, Math.random() * 100], [2, 2, 0, Math.random() * 100],
-            [0, 0, 1, Math.random() * 100], [1, 0, 1, Math.random() * 100], [2, 0, 1, Math.random() * 100],
-            [0, 1, 1, Math.random() * 100], [1, 1, 1, Math.random() * 100], [2, 1, 1, Math.random() * 100],
-            [0, 2, 1, Math.random() * 100], [1, 2, 1, Math.random() * 100], [2, 2, 1, Math.random() * 100],
-            [0, 0, 2, Math.random() * 100], [1, 0, 2, Math.random() * 100], [2, 0, 2, Math.random() * 100],
-            [0, 1, 2, Math.random() * 100], [1, 1, 2, Math.random() * 100], [2, 1, 2, Math.random() * 100],
-            [0, 2, 2, Math.random() * 100], [1, 2, 2, Math.random() * 100], [2, 2, 2, Math.random() * 100],
-          ],
+          source: this.source,
         },
         visualMap: [
           {
@@ -37,6 +48,7 @@ export default {
             min: 0,
             inRange: {
               color: ['#1710c0', '#0b9df0', '#00fea8', '#00ff0d', '#f5f811', '#f09a09', '#fe0300'],
+              colorAlpha: [0.2, 1],
             },
             textStyle: {
               color: '#fff',
@@ -71,7 +83,7 @@ export default {
             textStyle: { fontSize: 18 },
           },
           viewControl: {
-            // autoRotate: true
+            autoRotate: true,
             // projection: 'orthographic'
           },
         },
@@ -84,7 +96,7 @@ export default {
               'z',
               'color',
             ],
-            opacity: 50,
+            opacity: 0.5,
             symbolSize: 30,
             itemStyle: {
               borderWidth: 1,
@@ -99,11 +111,6 @@ export default {
   methods: {
     refresh() {
       this.$refs.chart.setOption(this.option, true, false);
-    },
-  },
-  watch: {
-    dataSet(newOptions, oldOptions) {
-      this.refresh();
     },
   },
   mounted() {
