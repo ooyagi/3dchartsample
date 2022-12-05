@@ -14,6 +14,11 @@ const routes: Array<RouteConfig> = [
     name: '3DStackBar',
     component: () => import('@/views/3DStackBar.vue'),
   },
+  {
+    path: '/line',
+    name: 'line',
+    component: () => import('@/views/Line.vue'),
+  },
 ];
 
 const router = new VueRouter({
