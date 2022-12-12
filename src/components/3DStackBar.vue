@@ -68,9 +68,21 @@ export default {
             barWidth: '100%',
             barCategoryGap: '0%',
             data: [
-              [0, 0, 1, Math.random() * 100], [0, 1, 1, Math.random() * 100], [0, 2, 1, Math.random() * 100],
-              [1, 0, 1, Math.random() * 100], [1, 1, 1, Math.random() * 100], [1, 2, 1, Math.random() * 100],
-              [2, 0, 1, Math.random() * 100], [2, 1, 1, Math.random() * 100], [2, 2, 1, Math.random() * 100],
+              [0, 0, 0.9, Math.random() * 100], [0, 1, 0.9, Math.random() * 100], [0, 2, 0.9, Math.random() * 100],
+              [1, 0, 0.9, Math.random() * 100], [1, 1, 0.9, Math.random() * 100], [1, 2, 0.9, Math.random() * 100],
+              [2, 0, 0.9, Math.random() * 100], [2, 1, 0.9, Math.random() * 100], [2, 2, 0.9, Math.random() * 100],
+            ],
+          },
+          {
+            type: 'bar3D',
+            stack: 'stack',
+            itemStyle: { opacity: 0 },
+            barWidth: '100%',
+            barCategoryGap: '0%',
+            data: [
+              [0, 0, 0.15, 100], [0, 1, 0.15, 100], [0, 2, 0.15, 100],
+              [1, 0, 0.15, 100], [1, 1, 0.15, 100], [1, 2, 0.15, 100],
+              [2, 0, 0.15, 100], [2, 1, 0.15, 100], [2, 2, 0.15, 100],
             ],
           },
           {
@@ -80,9 +92,21 @@ export default {
             barWidth: '100%',
             barCategoryGap: '0%',
             data: [
-              [0, 0, 1, Math.random() * 100], [0, 1, 1, Math.random() * 100], [0, 2, 1, Math.random() * 100],
-              [1, 0, 1, Math.random() * 100], [1, 1, 1, Math.random() * 100], [1, 2, 1, Math.random() * 100],
-              [2, 0, 1, Math.random() * 100], [2, 1, 1, Math.random() * 100], [2, 2, 1, Math.random() * 100],
+              [0, 0, 0.9, Math.random() * 100], [0, 1, 0.9, Math.random() * 100], [0, 2, 0.9, Math.random() * 100],
+              [1, 0, 0.9, Math.random() * 100], [1, 1, 0.9, Math.random() * 100], [1, 2, 0.9, Math.random() * 100],
+              [2, 0, 0.9, Math.random() * 100], [2, 1, 0.9, Math.random() * 100], [2, 2, 0.9, Math.random() * 100],
+            ],
+          },
+          {
+            type: 'bar3D',
+            stack: 'stack',
+            itemStyle: { opacity: 0 },
+            barWidth: '100%',
+            barCategoryGap: '0%',
+            data: [
+              [0, 0, 0.15, 100], [0, 1, 0.15, 100], [0, 2, 0.15, 100],
+              [1, 0, 0.15, 100], [1, 1, 0.15, 100], [1, 2, 0.15, 100],
+              [2, 0, 0.15, 100], [2, 1, 0.15, 100], [2, 2, 0.15, 100],
             ],
           },
           {
@@ -92,9 +116,9 @@ export default {
             barWidth: '100%',
             barCategoryGap: '0%',
             data: [
-              [0, 0, 1, Math.random() * 100], [0, 1, 1, Math.random() * 100], [0, 2, 1, Math.random() * 100],
-              [1, 0, 1, Math.random() * 100], [1, 1, 1, Math.random() * 100], [1, 2, 1, Math.random() * 100],
-              [2, 0, 1, Math.random() * 100], [2, 1, 1, Math.random() * 100], [2, 2, 1, Math.random() * 100],
+              [0, 0, 0.9, Math.random() * 100], [0, 1, 0.9, Math.random() * 100], [0, 2, 0.9, Math.random() * 100],
+              [1, 0, 0.9, Math.random() * 100], [1, 1, 0.9, Math.random() * 100], [1, 2, 0.9, Math.random() * 100],
+              [2, 0, 0.9, Math.random() * 100], [2, 1, 0.9, Math.random() * 100], [2, 2, 0.9, Math.random() * 100],
             ],
           },
         ],
